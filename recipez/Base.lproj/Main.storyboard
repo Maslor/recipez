@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1092" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="0Li-QG-vZx">
             <objects>
-                <viewController id="ug4-jd-Kvj" sceneMemberID="viewController">
+                <viewController id="ug4-jd-Kvj" customClass="CreateRecipeVC" customModule="recipez" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Am0-5O-7Q9"/>
                         <viewControllerLayoutGuide type="bottom" id="StC-gl-stJ"/>
@@ -119,7 +119,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-gT-nQo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Harissa-Potatoes-626x415" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-gT-nQo">
                                 <rect key="frame" x="210" y="237" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="NM1-MB-b7R"/>
@@ -157,6 +157,13 @@
                             <constraint firstItem="jU3-gT-nQo" firstAttribute="centerX" secondItem="FeK-Ng-luM" secondAttribute="centerX" id="zPS-Ng-2jA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addRecipeButton" destination="FcM-Af-0Gv" id="thW-TC-vtW"/>
+                        <outlet property="recipeImg" destination="jU3-gT-nQo" id="6LU-vV-ru8"/>
+                        <outlet property="recipeIngredients" destination="6NK-gs-mSg" id="TQN-bW-iwk"/>
+                        <outlet property="recipeSteps" destination="b7E-gU-ksX" id="LZn-qa-haZ"/>
+                        <outlet property="recipeTitle" destination="rrt-iq-gha" id="aKq-M8-WNx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCI-LJ-l3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,4 +189,7 @@
             <point key="canvasLocation" x="280" y="997"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Harissa-Potatoes-626x415" width="626" height="415"/>
+    </resources>
 </document>
