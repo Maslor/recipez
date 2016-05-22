@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-0E-Iqc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-0E-Iqc">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -26,10 +26,10 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="38i-Qc-7xY" id="93W-x7-6Xm">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="94.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03K-Wh-Hbh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03K-Wh-Hbh">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="94.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delicious Pizza " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUT-Tg-aPW">
@@ -107,38 +107,54 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrt-iq-gha">
                                 <rect key="frame" x="16" y="95" width="564" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6NK-gs-mSg">
                                 <rect key="frame" x="16" y="133" width="564" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Steps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-gU-ksX">
                                 <rect key="frame" x="16" y="171" width="564" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Harissa-Potatoes-626x415" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-gT-nQo">
                                 <rect key="frame" x="210" y="237" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="NM1-MB-b7R"/>
                                     <constraint firstAttribute="width" constant="180" id="NwK-zA-Jmc"/>
+                                    <constraint firstAttribute="height" constant="180" id="Pe0-fg-Qsm"/>
+                                    <constraint firstAttribute="width" constant="180" id="TBm-J5-c4n"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NM1-MB-b7R"/>
+                                        <exclude reference="NwK-zA-Jmc"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-NT-F48">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-NT-F48">
                                 <rect key="frame" x="250" y="307" width="101" height="39"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="addImage:" destination="ug4-jd-Kvj" eventType="touchUpInside" id="T9a-So-srm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcM-Af-0Gv">
                                 <rect key="frame" x="251" y="451" width="99" height="30"/>
                                 <state key="normal" title="Create Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="ug4-jd-Kvj" eventType="touchUpInside" id="JdI-ye-SeP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6NK-gs-mSg" firstAttribute="trailing" secondItem="FeK-Ng-luM" secondAttribute="trailingMargin" id="26Z-aN-eBc"/>
+                            <constraint firstItem="jU3-gT-nQo" firstAttribute="centerX" secondItem="FeK-Ng-luM" secondAttribute="centerX" id="36e-WU-6iP"/>
+                            <constraint firstItem="FcM-Af-0Gv" firstAttribute="top" secondItem="jU3-gT-nQo" secondAttribute="bottom" constant="34" id="5t6-1l-hso"/>
                             <constraint firstItem="tXe-NT-F48" firstAttribute="height" secondItem="jU3-gT-nQo" secondAttribute="height" id="6CJ-5x-vbs"/>
                             <constraint firstItem="jU3-gT-nQo" firstAttribute="top" secondItem="b7E-gU-ksX" secondAttribute="bottom" constant="36" id="7ZX-k4-Dtw"/>
                             <constraint firstItem="tXe-NT-F48" firstAttribute="width" secondItem="jU3-gT-nQo" secondAttribute="width" id="AEp-B6-DoI"/>
@@ -149,13 +165,27 @@
                             <constraint firstItem="6NK-gs-mSg" firstAttribute="top" secondItem="rrt-iq-gha" secondAttribute="bottom" constant="8" id="Qdk-dX-Pko"/>
                             <constraint firstItem="FcM-Af-0Gv" firstAttribute="centerX" secondItem="FeK-Ng-luM" secondAttribute="centerX" id="TEC-X8-e4s"/>
                             <constraint firstItem="rrt-iq-gha" firstAttribute="trailing" secondItem="FeK-Ng-luM" secondAttribute="trailingMargin" id="WPq-ms-igP"/>
+                            <constraint firstItem="tXe-NT-F48" firstAttribute="centerY" secondItem="FeK-Ng-luM" secondAttribute="centerY" id="cG5-OP-Yex"/>
                             <constraint firstItem="rrt-iq-gha" firstAttribute="top" secondItem="Am0-5O-7Q9" secondAttribute="bottom" constant="31" id="dMk-d9-X1q"/>
+                            <constraint firstItem="tXe-NT-F48" firstAttribute="centerX" secondItem="FeK-Ng-luM" secondAttribute="centerX" id="e1n-fI-vwe"/>
+                            <constraint firstItem="jU3-gT-nQo" firstAttribute="top" secondItem="b7E-gU-ksX" secondAttribute="bottom" constant="36" id="jQe-t0-L1E"/>
                             <constraint firstItem="6NK-gs-mSg" firstAttribute="leading" secondItem="FeK-Ng-luM" secondAttribute="leadingMargin" id="lvX-et-8bJ"/>
                             <constraint firstItem="b7E-gU-ksX" firstAttribute="trailing" secondItem="FeK-Ng-luM" secondAttribute="trailingMargin" id="qhP-Sk-G44"/>
                             <constraint firstItem="rrt-iq-gha" firstAttribute="leading" secondItem="FeK-Ng-luM" secondAttribute="leadingMargin" id="uWq-4G-wEC"/>
                             <constraint firstItem="b7E-gU-ksX" firstAttribute="top" secondItem="6NK-gs-mSg" secondAttribute="bottom" constant="8" id="wef-Fi-bxp"/>
                             <constraint firstItem="jU3-gT-nQo" firstAttribute="centerX" secondItem="FeK-Ng-luM" secondAttribute="centerX" id="zPS-Ng-2jA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7ZX-k4-Dtw"/>
+                                <exclude reference="Buv-JF-fo6"/>
+                                <exclude reference="NIe-MB-i6b"/>
+                                <exclude reference="zPS-Ng-2jA"/>
+                                <exclude reference="6CJ-5x-vbs"/>
+                                <exclude reference="AEp-B6-DoI"/>
+                                <exclude reference="JZf-OV-rAC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addRecipeButton" destination="FcM-Af-0Gv" id="thW-TC-vtW"/>

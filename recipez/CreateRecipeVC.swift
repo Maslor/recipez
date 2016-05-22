@@ -23,7 +23,7 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        recipeImg.layer.cornerRadius = 3.0
+        recipeImg.layer.cornerRadius = 5.0
         recipeImg.clipsToBounds = true
     }
     
@@ -38,12 +38,14 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func createRecipe(sender: AnyObject!) {
         if let title = recipeTitle.text where title != "" {
+            
             let app = UIApplication.sharedApplication().delegate as! AppDelegate
             let context = app.managedObjectContext
             let entity = NSEntityDescription.entityForName("Recipe", inManagedObjectContext: context)!
             let recipe = Recipe(entity: entity, insertIntoManagedObjectContext: context)
             recipe.title = recipeTitle.text
             recipe.ingredients = recipeIngredients.text
+            recipe.steps = recipeSteps.text
             recipe.setRecipeImage(recipeImg.image!)
             
             context.insertObject(recipe)
@@ -54,7 +56,7 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print("Couldn't save the recipe")
             }
             
-            dismissViewControllerAnimated(true, completion: nil)
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
 }
